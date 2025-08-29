@@ -1,0 +1,53 @@
+.jumbotron {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.bannerText{
+    width: 50%;
+}
+
+.welcomeText {
+    margin-bottom: 45px;
+}
+
+.welcomeText h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    line-height: 50px;
+    color: #496569;
+}
+
+h3, h5{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    font-size: 20;
+}
+
+h5{
+    font-size: 15px;
+}
+
+
+.image {
+    display: flex;
+    max-width: 50%;
+    justify-content: flex-end;
+}
+
+.logo {
+    max-width: 75%;
+    border-radius: 400px;
+}

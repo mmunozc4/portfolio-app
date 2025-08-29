@@ -1,0 +1,37 @@
+<div class="container text-center">
+    <div class="pb-2">
+        <accordion [isAnimated]="true">
+            <div class="accordionContainer">
+                <div class="accordionGroup1">
+                    <accordion-group class="accordion1" heading="Experiencia en la industria">
+                        <div class="jobEntry">
+                            <p class="jobDescription"> {{ data.experiencia_industria }} </p>
+                        </div>
+                    </accordion-group>
+                    <accordion-group class="accordion2" heading="Skills">
+                        <div class="cardsContainer">
+                            <div class="cardBody" *ngFor="let categoria of (data.skills_tecnologias | keyvalue)">
+                                <div class="cardTitle">
+                                    {{ categoria.key }}
+                                </div>
+                                <div class="cardList">
+                                    <div class="tag" *ngFor="let skill of categoria.value">
+                                        {{ skill }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </accordion-group>
+                </div>
+                <div class="accordionGroup2">
+                    <accordion-group class="accordion4" heading="Certificaciones">
+                        <ul>
+                            <li *ngFor="let cert of data.certificaciones">{{ cert }}</li>
+                        </ul>
+                    </accordion-group>
+                </div>
+            </div>
+
+        </accordion>
+    </div>
+</div>

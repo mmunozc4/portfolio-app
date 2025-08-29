@@ -1,0 +1,19 @@
+<div (click)="openProjectModal()" class="card shadow">
+
+    <div class="image-overlay">
+        <img src="assets/carrousel/3.png" class="card-img-top" alt="...">
+        <button class="btnMore btn btn-primary">Ver más</button>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title">{{project.name}}</h5>
+        <p class="card-text">{{project.summary}}</p>
+    </div>
+    <div class="card-footer">
+        <div class="tagsContainer">
+            <div *ngFor="let tag of project.tags">
+                <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
+            </div>
+        </div>
+    </div>
+</div>

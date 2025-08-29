@@ -1,0 +1,11 @@
+a {
+    cursor: pointer;
+}
+
+.container {
+    justify-content: center !important;
+}
+
+.textActive {
+    color: #adb5bd !important;
+}

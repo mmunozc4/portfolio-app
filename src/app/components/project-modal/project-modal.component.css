@@ -1,0 +1,53 @@
+::ng-deep .modal-lg {
+    --bs-modal-width: 90% !important;
+}
+
+::ng-deep .modal-content {
+    background-color: #e9ecef !important;
+    border-radius: 20px !important;
+}
+
+.modal-header h2 {
+    font-family: 'Heebo-Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+.carouselContainer {
+    width: 50%;
+}
+
+.projectInfo {
+    width: 45%;
+}
+
+.projectText,
+.projectTags {
+    margin-bottom: 5%;
+}
+
+.projectTags {
+    display: flex;
+    flex-direction: row;
+}
+
+.projectRepo {
+    justify-self: start;
+}
+
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+}

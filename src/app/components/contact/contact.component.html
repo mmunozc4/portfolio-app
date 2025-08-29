@@ -1,0 +1,50 @@
+<div class="container">
+
+    <div class="contactSection">
+        <div class="infoContainer">
+            <div class="">
+                <div class="infoHeader">
+                    <h1>{{contactData.mensaje1}}</h1>
+                    <p>{{contactData.mensaje2}}</p>
+                    <p>{{contactData.correo}}</p>
+                </div>
+                <div class="infoLinks">
+                    <a (click)="redirectTo(contactData.redes.linkedin)" target="_blank">
+                        <img src="assets/icon/linkedin.svg" alt="LinkedIn Logo">
+                    </a>
+                    <a (click)="redirectTo(contactData.redes.github)" target="_blank">
+                        <img src="assets/icon/github.svg" alt="GitHub Logo">
+                    </a>
+                    <a (click)="redirectTo(contactData.redes.instagram)" target="_blank">
+                        <img src="assets/icon/instagram.svg" alt="Instagram Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form class="contactForm" (ngSubmit)="onSubmit()">
+            <div class="formContainer shadowContainer">
+                <div class="formGroup">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" [(ngModel)]="contactForm.nombre"
+                        placeholder="Mateo Yepes">
+                </div>
+                <div class="formGroup">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" [(ngModel)]="contactForm.correo">
+                </div>
+                <div class="formGroup">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" [(ngModel)]="contactForm.subject">
+                </div>
+                <div class="formGroup">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="8" [(ngModel)]="contactForm.mensaje"></textarea>
+                </div>
+                <div class="formButton">
+                    <button class="btn btn-primary" type="submit">Enviar Mensaje</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

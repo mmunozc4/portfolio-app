@@ -1,0 +1,107 @@
+.container {
+    padding: 70px;
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+
+
+.infoContainer {
+    width: 40%;
+}
+
+
+.infoHeader {
+    margin-bottom: 15%;
+}
+
+.infoHeader h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+
+}
+
+
+
+.infoLinks{
+    display: flex;
+    gap: 15px;
+}
+
+.infoLinks a{
+    cursor: pointer;
+}
+
+.infoLinks img{
+    width: 40px;
+}
+
+
+
+
+.contactForm {
+    width: 55%;
+}
+
+.formGroup {
+    margin-bottom: 25px;
+}
+
+.formGroup label {
+    display: block;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #90b8e03a;
+    border: none;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background-color: #90b8e0;
+    color: #f8f8f8;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.formGroup:first-of-type input::placeholder {
+    color: #000000;
+}
+
+
+.btn {
+    border-radius: 50px !important;
+}
+
+.shadowContainer{
+    padding: 20px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .17);
+    border-radius: 20px;
+}

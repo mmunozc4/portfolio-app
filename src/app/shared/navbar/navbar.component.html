@@ -1,0 +1,22 @@
+<nav class="navbar-expand-lg navbar-light bg-light navbar">
+    <div class="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a (click)="navigateTo('/home')" class="nav-link text-secondary"
+                    [class.textActive]="isRouteActive('/home')">Home</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="navigateTo('/portfolio')" class="nav-link text-secondary"
+                    [class.textActive]="isRouteActive('/portfolio')">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="navigateTo('/resume')" class="nav-link text-secondary"
+                    [class.textActive]="isRouteActive('/resume')">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="navigateTo('/contact')" class="nav-link text-secondary"
+                    [class.textActive]="isRouteActive('/contact')">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

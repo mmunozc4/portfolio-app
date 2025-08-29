@@ -1,0 +1,125 @@
+.container {
+    max-width: 90%;
+    margin-top: 5%;
+}
+
+.aboutUs {
+    margin-bottom: 15%;
+}
+
+.aboutUsTitle h2 {
+    font-family: 'Heebo-Bold', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    margin-bottom: 2% !important;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.aboutUsCard {
+    background-color: #6187b5af;
+    color: #fff;
+    height: auto;
+    width: 34%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, .17);
+}
+
+.aboutUsCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+    margin-top: 10%;
+}
+
+.cardHeader h1 {
+    font-family: 'Heebo-Bold', sans-serif;
+    font-size: 35px;
+    line-height: inherit;
+}
+
+.cardContainer {
+    width: 70%;
+    margin-bottom: 20%;
+}
+
+.cardContainer p {
+    font-family: 'Heebo-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.33;
+    margin-top: 20%;
+}
+
+.featuredProject {
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, .17);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.featuredProjectContainer {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.featuredProjectHeader {
+    margin-bottom: 1%;
+}
+
+.featuredProjectHeader h2 {
+    font-family: 'Heebo-Bold', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.featuredProjectHeader h4 {
+    font-family: 'Heebo-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.featuredProjectContain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featuredProjectCarrousel {
+    width: 55%;
+}
+
+.featuredProjectDescription {
+    width: 35%;
+}
+
+
+.section {
+    padding-bottom: 15%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.dark {
+    border-color: #ffffff;
+}

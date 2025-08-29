@@ -1,0 +1,177 @@
+.container {
+    padding: 100px;
+}
+
+accordion-group::ng-deep .btn-link {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+accordion-group::ng-deep .card-header {
+    background-color: #90b8e0 !important;
+}
+
+.accordionContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.accordionGroup1,
+.accordionGroup2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.accordionGroup1 {
+    margin-bottom: 3%;
+}
+
+.accordion1 {
+    width: 55%;
+}
+
+.accordion2 {
+    width: 35%;
+}
+
+.accordion4 {
+    width: 70%;
+}
+
+.jobEntry {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.jobEntry:last-child {
+    margin-bottom: 0;
+}
+
+.jobHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.headerDetails {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.jobTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.jobCompany {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.jobDate {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.jobDate span {
+    font-weight: 600;
+}
+
+.jobDate p {
+    margin: 0;
+}
+
+.jobDescription {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.jobHighlights {
+    margin-bottom: 1rem;
+}
+
+.highlightsTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.jobHighlights ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.jobHighlights li::before {
+    content: '▪';
+    color: #555;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.jobSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skillTag {
+    background-color: #eee;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 500;
+}
+
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardBody {
+    padding: 3%;
+}
+
+.cardTitle {
+    text-decoration: underline;
+    text-decoration-color: #90b8e0;
+    margin-bottom: 5%;
+}
+
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 10px;
+}
+
+
+.tag {
+    padding: 0 20px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    background-color: #7493b971;
+}
+
+.accordion4 ul li {
+    text-align: justify;
+}

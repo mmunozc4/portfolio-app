@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div class="filterButton">
+        <div>
+            <button class="btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">Filtros de busqueda</button>
+            <button class="btn btn-outline-secondary mb-2" (click)="resetFilters()" [hidden]="!filtering">Reset</button>
+        </div>
+
+        <div [collapse]="isCollapsed" [isAnimated]="true">
+            <div class="border mb-2 shadow">
+                <form action="submit">
+                    <div class="row mx-0">
+                        <div class="col">
+                            <small><b>Languages</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input position-static me-2"
+                                        [(ngModel)]="typescript" (change)="filter()" name="Typescript">
+                                    <label class="form-check-label small">TypeScript</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <small><b>Frameworks</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input position-static me-2"
+                                        [(ngModel)]="angular" (change)="filter()" name="Angular">
+                                    <label class="form-check-label small">Angular</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let project of projects" class="mb-4 projectsCards" appAnimateOnScroll appAnimate="fadeInUp">
+            <app-project-card [project]="project"></app-project-card>
+        </div>
+    </div>
+
+    
+
+</div>

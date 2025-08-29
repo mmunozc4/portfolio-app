@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="section row">
+        <div class="aboutUs">
+            <div class="aboutUsTitle">
+                <h2>Sobre Nosotros</h2>
+                {{ sobreNosotros.propuesta_valor }}
+            </div>
+            <div class="tinyline"></div>
+            <div class="cardsContainer">
+                <div class="aboutUsCard" appAnimateOnScroll appAnimate="fadeInRight" [delay]="'0s'">
+                    <div class="cardHeader">
+                        <h1>Quiénes somos</h1>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="tinyline dark"></div>
+                        <p>{{ sobreNosotros.quienes_somos }}</p>
+                    </div>
+                </div>
+                <div class="aboutUsCard" appAnimateOnScroll appAnimate="fadeInRight" [delay]="'0.3s'">
+                    <div class="cardHeader">
+                        <h1>Qué hacemos</h1>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="tinyline dark"></div>
+                         <p>{{ sobreNosotros.que_hacemos }}</p>
+                    </div>
+                </div>
+                <div class="aboutUsCard" appAnimateOnScroll appAnimate="fadeInRight" [delay]="'0.6s'">
+                    <div class="cardHeader">
+                        <h1>Qué nos diferencia</h1>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="tinyline dark"></div>
+                        <p>{{ sobreNosotros.que_nos_diferencia }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="featuredProject" appAnimateOnScroll appAnimate="fadeInUp">
+            <div class="featuredProjectContainer">
+                <div class="featuredProjectHeader">
+                    <h2>Feature Project</h2>
+                    <h4>{{featuredProject.name}}</h4>
+                </div>
+
+                <div class="featuredProjectContain">
+                    <div class="featuredProjectCarrousel">
+                        <carousel [isAnimated]="true">
+                            <div *ngFor="let picture of featuredProject.pictures">
+                                <slide class="slide"> <img src={{picture}} alt="first slide"> </slide>
+                            </div>
+                        </carousel>
+
+                    </div>
+                    <div class="featuredProjectDescription">
+                        <p class="mt-2">{{featuredProject.description}}</p>
+                        <p>Revisa la seccion de <a class="link" (click)="redirectTo()">Portafolio</a> para mas </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="section" appAnimateOnScroll appAnimate="fadeInLeft">
+        <app-resume></app-resume>
+    </div>
+
+    <div class="section" appAnimateOnScroll appAnimate="zoomIn">
+        <app-contact></app-contact>
+    </div>
+</div>
