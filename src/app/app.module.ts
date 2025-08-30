@@ -17,7 +17,7 @@ import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { AccordionModule } from 'ngx-bootstrap/accordion'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AnimateOnScrollDirective } from './directives/animate-on-scroll.directive';
 
 @NgModule({
@@ -41,7 +41,8 @@ import { AnimateOnScrollDirective } from './directives/animate-on-scroll.directi
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
     AccordionModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]
