@@ -21,27 +21,27 @@
                 </div>
             </div>
         </div>
-        <form class="contactForm" (ngSubmit)="onSubmit()">
+        <form class="contactForm" [formGroup]="contactForm">
             <div class="formContainer shadowContainer">
                 <div class="formGroup">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" [(ngModel)]="contactForm.nombre"
+                    <input type="text" id="nombre" name="nombre" formControlName="nombre"
                         placeholder="Mateo Yepes">
                 </div>
                 <div class="formGroup">
                     <label for="correo">Correo</label>
-                    <input type="email" id="correo" name="correo" [(ngModel)]="contactForm.correo">
+                    <input type="email" id="correo" name="correo" formControlName="correo">
                 </div>
                 <div class="formGroup">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" [(ngModel)]="contactForm.subject">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" formControlName="asunto">
                 </div>
                 <div class="formGroup">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="8" [(ngModel)]="contactForm.mensaje"></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="8" formControlName="mensaje"></textarea>
                 </div>
                 <div class="formButton">
-                    <button class="btn btn-primary" type="submit">Enviar Mensaje</button>
+                    <button class="btn btn-primary" type="submit" (click)="onSubmit()">Enviar Mensaje</button>
                 </div>
             </div>
         </form>
