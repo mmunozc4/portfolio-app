@@ -35,17 +35,14 @@ accordion-group::ng-deep .card-header {
 
 .accordion1 {
     flex: 1 1 55%;
-    min-width: 280px;
 }
 
 .accordion2 {
     flex: 1 1 35%;
-    min-width: 250px;
 }
 
 .accordion4 {
     flex: 1 1 70%;
-    min-width: 300px;
 }
 
 .jobEntry {
@@ -212,5 +209,9 @@ accordion-group::ng-deep .card-header {
     .tag {
         font-size: 11px;
         padding: 0 15px;
+    }
+
+    .accordion1 {
+        margin-bottom: 3%;
     }
 }

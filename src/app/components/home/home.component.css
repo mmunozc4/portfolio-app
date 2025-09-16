@@ -28,7 +28,6 @@
     background-color: var(--cardsColor);
     color: #000;
     flex: 1 1 calc(33.333% - 20px);
-    min-width: 280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -104,12 +103,10 @@
 
 .featuredProjectCarrousel {
     flex: 1 1 60%;
-    min-width: 300px;
 }
 
 .featuredProjectDescription {
     flex: 1 1 35%;
-    min-width: 250px;
 }
 
 .featuredProjectDescription p{
