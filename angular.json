@@ -46,7 +46,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "https://mmunozc4.github.io/portfolio-app/"
             },
             "development": {
               "buildOptimizer": false,
