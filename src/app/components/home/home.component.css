@@ -112,6 +112,10 @@
     min-width: 250px;
 }
 
+.featuredProjectDescription p{
+  white-space: pre-line;
+}
+
 
 .section {
     padding-bottom: 15%;
