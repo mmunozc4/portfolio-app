@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { mypuData } from 'src/assets/contenidoPagina';
@@ -13,32 +14,39 @@ import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 export class ContactComponent {
   contactData = mypuData.contacto;
 
-  contactForm = {
-    nombre: '',
-    correo: '',
-    subject: '',
-    mensaje: ''
-  };
+  private fb = inject(FormBuilder);
 
-  constructor(private titleService: Title, private router: Router) { }
+  contactForm = this.fb.group({
+    nombre: ['', [Validators.required]],
+    correo: ['', [Validators.required, Validators.email]],
+    asunto: ['', [Validators.required]],
+    mensaje: ['', [Validators.required]]
+  })
+
+  constructor(private titleService: Title, private router: Router) {
+  }
+
 
   onSubmit() {
-    console.log('Información del formulario enviada:', this.contactForm);
+    if (this.contactForm.invalid) {
+      alert('Faltan campos por completar')
+      return
+    } else {
+      const serviceID = 'service_dcgw4ho';
+      const templateID = 'template_pyourbs';
+      const publicKey = 'tpuuH8rKIfPgFhsdc';
 
-    const serviceID = 'service_dcgw4ho';   
-    const templateID = 'template_pyourbs'; 
-    const publicKey = 'tpuuH8rKIfPgFhsdc';     
-
-    emailjs.send(serviceID, templateID, this.contactForm, publicKey)
-      .then((response: EmailJSResponseStatus) => {
-        console.log('Correo enviado con éxito!', response.status, response.text);
-        alert('Tu mensaje fue enviado correctamente 🚀');
-        this.contactForm = { nombre: '', correo: '', subject: '', mensaje: '' };
-      })
-      .catch((err) => {
-        console.error('Error al enviar:', err);
-        alert('Hubo un error al enviar tu mensaje');
-      });
+      emailjs.send(serviceID, templateID, this.contactForm.value, publicKey)
+        .then((response: EmailJSResponseStatus) => {
+          console.log('Correo enviado con éxito!', response.status, response.text);
+          alert('Tu mensaje fue enviado correctamente 🚀');
+          this.contactForm.reset();
+        })
+        .catch((err) => {
+          console.error('Error al enviar:', err);
+          alert('Hubo un error al enviar tu mensaje');
+        });
+    }
   }
 
   redirectTo(path: string) {
