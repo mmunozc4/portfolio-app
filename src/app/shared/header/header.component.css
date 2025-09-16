@@ -1,6 +1,6 @@
 .jumbotron {
     padding: 2rem 1rem;
-    background-color: #e9ecef;
+    background-color: var(--background);
     display: flex;
     justify-content: space-around;
 }
@@ -9,11 +9,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
 }
 
 
 
-.bannerText{
+.bannerText {
     width: 50%;
 }
 
@@ -25,18 +28,20 @@
     font-family: 'Oswald', sans-serif;
     font-size: 60px;
     line-height: 50px;
-    color: #496569;
+    color: var(--bannerTextColor);
 }
 
-h3, h5{
+h3,
+h5 {
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--bannerTextColor);
 }
 
-h3{
+h3 {
     font-size: 20;
 }
 
-h5{
+h5 {
     font-size: 15px;
 }
 
@@ -50,4 +55,56 @@ h5{
 .logo {
     max-width: 75%;
     border-radius: 400px;
+}
+
+@media (max-width: 992px) {
+    .headerContainer {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .bannerText {
+        width: 100%;
+    }
+
+    .image {
+        max-width: 60%;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .logo {
+        max-width: 100%;
+    }
+
+    .welcomeText h1 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcomeText h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 13px;
+    }
+
+    .logo {
+        max-width: 80%;
+    }
 }

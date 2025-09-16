@@ -6,10 +6,10 @@ export const mypuData = {
         texto_ienvenida: 'Transformamos tu visión en tecnología'
     },
     sobre_nosotros: {
-        propuesta_valor: 'En MyPu Technologies transformamos ideas en soluciones tecnológicas innovadoras. Creamos software escalable y de calidad que ayuda a empresas y emprendedores a crecer, optimizar sus procesos y generar nuevas oportunidades de negocio.',
-        quienes_somos: 'Somos una startup de desarrollo tecnológico enfocada en crear software innovador que ayude a empresas y emprendedores a crecer en la era digital.',
+        propuesta_valor: 'En MyPu transformamos ideas en soluciones tecnológicas innovadoras. Creamos software escalable y de calidad que ayuda a empresas y emprendedores a crecer, optimizar sus procesos y generar nuevas oportunidades de negocio.',
+        quienes_somos: 'Somos una startup de desarrollo tecnológico enfocada en crear software innovador que ayude a empresas y emprendedores a crecer en la era digital!',
         que_hacemos: 'Desarrollamos software a la medida, aplicaciones web y móviles, y soluciones de automatización que se adaptan a las necesidades de cada cliente. Usamos metodologías ágiles para garantizar resultados rápidos, eficientes y de calidad.',
-        que_nos_diferencia: 'Nos enfocamos en la innovación, la experiencia de usuario y la escalabilidad. Más que programar, acompañamos a nuestros clientes en la evolución de sus proyectos, asegurando que la tecnología potencie su crecimiento.'
+        que_nos_diferencia: 'Nos enfocamos en la innovación, la experiencia de usuario y la escalabilidad. Más que programar, acompañamos a nuestros clientes en la evolución de sus proyectos, asegurando que la tecnología potencie su crecimiento'
     },
     resumen: {
         experiencia_industria: `El equipo fundador de MyPu ha participado en proyectos tecnológicos para sectores financieros, comercio y servicios. Entre estas experiencias se destacan contribuciones en iniciativas de gran alcance como Plink (Bancolombia) y Puntos Colombia, lo que ha permitido adquirir conocimientos en desarrollo full stack, integración de sistemas, despliegue en la nube y trabajo bajo metodologías ágiles. 

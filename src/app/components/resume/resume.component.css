@@ -1,14 +1,19 @@
 .container {
-    padding: 100px;
+    padding: 3%;
+    padding-bottom: 10%;
 }
 
 accordion-group::ng-deep .btn-link {
-    color: #fff !important;
+    color: #000000 !important;
     text-decoration: none;
 }
 
+accordion-group::ng-deep .card {
+    --bs-card-bg: var(--appBackground) !important;
+}
+
 accordion-group::ng-deep .card-header {
-    background-color: #90b8e0 !important;
+    background-color: var(--cardHeaderBackground) !important;
 }
 
 .accordionContainer {
@@ -20,6 +25,7 @@ accordion-group::ng-deep .card-header {
 .accordionGroup2 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -28,20 +34,23 @@ accordion-group::ng-deep .card-header {
 }
 
 .accordion1 {
-    width: 55%;
+    flex: 1 1 55%;
+    min-width: 280px;
 }
 
 .accordion2 {
-    width: 35%;
+    flex: 1 1 35%;
+    min-width: 250px;
 }
 
 .accordion4 {
-    width: 70%;
+    flex: 1 1 70%;
+    min-width: 300px;
 }
 
 .jobEntry {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--tagColor);
+    border: 1px solid var(--appBackground);
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -72,7 +81,7 @@ accordion-group::ng-deep .card-header {
 
 .jobCompany {
     font-size: 0.9rem;
-    color: #666;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -92,7 +101,7 @@ accordion-group::ng-deep .card-header {
 
 .jobDescription {
     font-size: 0.9rem;
-    color: #555;
+    color: #000000;
     margin-bottom: 1rem;
     text-align: justify;
 }
@@ -115,7 +124,7 @@ accordion-group::ng-deep .card-header {
 
 .jobHighlights li::before {
     content: '▪';
-    color: #555;
+    color: #ededed;
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -129,11 +138,11 @@ accordion-group::ng-deep .card-header {
 }
 
 .skillTag {
-    background-color: #eee;
+    background-color: var(--appBackground);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
-    color: #555;
+    color: #f8f8f8;
     font-weight: 500;
 }
 
@@ -150,8 +159,10 @@ accordion-group::ng-deep .card-header {
 
 .cardTitle {
     text-decoration: underline;
-    text-decoration-color: #90b8e0;
+    text-decoration-color: var(--cardHeaderBackground);
     margin-bottom: 5%;
+    color: #ffffff;
+    text-align: center;
 }
 
 .cardList {
@@ -169,9 +180,37 @@ accordion-group::ng-deep .card-header {
     height: 22px;
     font-size: 12px;
     line-height: 22px;
-    background-color: #7493b971;
+    background-color: var(--tagColor);
 }
 
 .accordion4 ul li {
     text-align: justify;
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+
+    .accordionGroup1,
+    .accordionGroup2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accordion1,
+    .accordion2,
+    .accordion4 {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .jobDescription {
+        font-size: 0.85rem;
+    }
+
+    .tag {
+        font-size: 11px;
+        padding: 0 15px;
+    }
 }

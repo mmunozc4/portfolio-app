@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   featuredProject = {} as project
 
   constructor(private titleService: Title, private projectsService: ProjectsService, private router: Router) {
-    this.titleService.setTitle(' Myypu - Home ')
   }
 
   ngOnInit(): void {

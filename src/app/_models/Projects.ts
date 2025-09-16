@@ -6,6 +6,7 @@ export interface project{
     summary: string;
     description: string;
     repoLink: string;
+    appLink: string;
     pictures: string[];
     tags: Tag[];
 }

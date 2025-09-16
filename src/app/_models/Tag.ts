@@ -8,10 +8,12 @@ export class Tag {
     static readonly ASPNET = new Tag('ASP.NET', '#D5A6E6');
     static readonly JAVASCRIPT = new Tag('JavaScript', '#FFEE99');
     static readonly REACT = new Tag('React', '#C5E8FF');
+    static readonly SQL = new Tag('SQL', '#FFD6A5');
+    static readonly POSTGRESQL = new Tag('PostgreSQL', '#6699CC');
 
     private constructor(private readonly key: string, public readonly color: string) { }
 
     toString() {
-        return this.key
+        return this.key;
     }
 }

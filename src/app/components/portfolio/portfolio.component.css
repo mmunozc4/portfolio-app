@@ -1,20 +1,36 @@
-.row{
+.row {
     justify-content: center !important;
+    gap: 20px;
 }
 
-.filterButton{
+.filterButton {
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 5% auto;
+    max-width: 100%;
 }
 
-
-.projectsCards{
+.projectsCards {
+    flex: 1 1 calc(33.333% - 20px);
     max-width: 40%;
     min-width: 40%;
 }
 
-.border{
-    max-width: 20%;
-    min-width: 20%;
+.border {
+    max-width: 100%;
+    width: auto;
+    padding: 10px;
+}
+
+@media (max-width: 992px) {
+    .projectsCards {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .projectsCards {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }

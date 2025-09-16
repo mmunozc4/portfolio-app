@@ -20,7 +20,6 @@ export class PortfolioComponent implements OnInit{
   
 
   constructor(private titleService: Title, private projectsService: ProjectsService) {
-    this.titleService.setTitle(' Myypu - Portfolio ')
   }
 
   ngOnInit(): void {

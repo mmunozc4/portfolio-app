@@ -1,6 +1,6 @@
 .container {
     max-width: 90%;
-    margin-top: 5%;
+    margin: 5% auto;
 }
 
 .aboutUs {
@@ -19,25 +19,27 @@
 
 .cardsContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .aboutUsCard {
-    background-color: #6187b5af;
-    color: #fff;
-    height: auto;
-    width: 34%;
+    background-color: var(--cardsColor);
+    color: #000;
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, .17);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .aboutUsCard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .cardHeader {
@@ -63,10 +65,10 @@
     margin-top: 20%;
 }
 
-.featuredProject {
-    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, .17);
-    width: 90%;
-    margin: 0 auto;
+.featuredProjectContain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .featuredProjectContainer {
@@ -101,11 +103,13 @@
 }
 
 .featuredProjectCarrousel {
-    width: 55%;
+    flex: 1 1 60%;
+    min-width: 300px;
 }
 
 .featuredProjectDescription {
-    width: 35%;
+    flex: 1 1 35%;
+    min-width: 250px;
 }
 
 
@@ -122,4 +126,57 @@ img {
 
 .dark {
     border-color: #ffffff;
+}
+
+
+@media (max-width: 992px) {
+    .aboutUsTitle h2 {
+        font-size: 28px;
+    }
+
+    .cardHeader h1 {
+        font-size: 26px;
+    }
+
+    .cardContainer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutUsCard {
+        width: 90%;
+    }
+
+    .featuredProjectContain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featuredProjectCarrousel,
+    .featuredProjectDescription {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutUsTitle h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .cardHeader h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .cardContainer p {
+        font-size: 14px;
+        text-align: justify;
+    }
 }

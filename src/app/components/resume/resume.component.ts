@@ -12,7 +12,6 @@ export class ResumeComponent {
   data = mypuData.resumen;
 
   constructor(private titleService: Title) {
-    this.titleService.setTitle(' Myypu - Resume ')
   }
 
 }

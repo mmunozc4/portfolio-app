@@ -61,5 +61,42 @@
 .tagsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 5% !important;
+        text-align: center;
+    }
+
+    .card-footer {
+        padding: 5% !important;
+    }
+
+    .tagsContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .btnMore {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
 }
